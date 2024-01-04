@@ -26,7 +26,10 @@ if (isset($data['inline_query'])) {
   $offset = 0;
 
   $gay = rand(0, 100);
-
+  if ($senderUserId == 'mark_a_li_li') {
+    $gay = 100;
+  }
+  
   if (isset($data['inline_query']['from']['language_code'])) {
     $langCode = $data['inline_query']['from']['language_code'];
   } else {
